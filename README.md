@@ -1,0 +1,1 @@
+This is Allen Cao's personal blog.

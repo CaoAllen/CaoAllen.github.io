@@ -6,17 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.allencao.com">
-  <title>Archives | AllenCao&#39;s blog</title>
+  <title>常见java基础面试题 | AllenCao&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我叫曹宇，是一名java开发者，这是我个人的技术博客">
-<meta name="keywords" content="Java，Java web，Spring，Microservices，Cloud，微服务，Nodejs， 前端开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="AllenCao&#39;s blog">
-<meta property="og:url" content="http:&#x2F;&#x2F;www.allencao.com&#x2F;archives&#x2F;index.html">
+  <meta name="description" content="Java的基础如果深挖可以问的很深入，但我们大部分都是在拧螺丝不是造火箭，除了一些性能调优，bug排查等场景，很多底层的原理我们不可能都有时间去深入了解，最好选择你自己感兴趣的或者需要的去看看jdk源码或者底层的实现。 以下是我收集的常见的基础问题和答案。回答的可能并不充分，各位可再自行查找和补充。 1.常见的java基本类型和它们的存储大小    8个的基础类型，    从小到大：byte-&amp;g">
+<meta name="keywords" content="Java Java面试基础 Java反射 Java异常">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常见java基础面试题">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.allencao.com&#x2F;2019&#x2F;08&#x2F;06&#x2F;%E5%B8%B8%E8%A7%81java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98&#x2F;index.html">
 <meta property="og:site_name" content="AllenCao&#39;s blog">
-<meta property="og:description" content="我叫曹宇，是一名java开发者，这是我个人的技术博客">
+<meta property="og:description" content="Java的基础如果深挖可以问的很深入，但我们大部分都是在拧螺丝不是造火箭，除了一些性能调优，bug排查等场景，很多底层的原理我们不可能都有时间去深入了解，最好选择你自己感兴趣的或者需要的去看看jdk源码或者底层的实现。 以下是我收集的常见的基础问题和答案。回答的可能并不充分，各位可再自行查找和补充。 1.常见的java基本类型和它们的存储大小    8个的基础类型，    从小到大：byte-&amp;g">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.allencao.com&#x2F;2019&#x2F;08&#x2F;06&#x2F;%E5%B8%B8%E8%A7%81java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98&#x2F;Java_Exceptions.png">
+<meta property="og:updated_time" content="2019-11-05T09:02:19.517Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;www.allencao.com&#x2F;2019&#x2F;08&#x2F;06&#x2F;%E5%B8%B8%E8%A7%81java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98&#x2F;Java_Exceptions.png">
   
     <link rel="alternative" href="/atom.xml" title="AllenCao&#39;s blog" type="application/atom+xml">
   
@@ -156,74 +159,122 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-常见java基础面试题" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/07/Java%E5%AE%B9%E5%99%A8%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2019-08-07T02:03:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-07</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/07/Java%E5%AE%B9%E5%99%A8%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/">Java容器相关面试题</a>
+    <h1 class="article-title" itemprop="name">
+      常见java基础面试题
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java Collection Map java集合 java容器</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/06/%E5%B8%B8%E8%A7%81java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/" class="archive-article-date">
+        
+        <a href="/2019/08/06/%E5%B8%B8%E8%A7%81java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/" class="archive-article-date">
   	<time datetime="2019-08-06T04:04:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-06</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/06/%E5%B8%B8%E8%A7%81java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/">常见java基础面试题</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Java的基础如果深挖可以问的很深入，但我们大部分都是在拧螺丝不是造火箭，除了一些性能调优，bug排查等场景，很多底层的原理我们不可能都有时间去深入了解，最好选择你自己感兴趣的或者需要的去看看jdk源码或者底层的实现。</strong></p>
+<p>以下是我收集的常见的基础问题和答案。回答的可能并不充分，各位可再自行查找和补充。</p>
+<p>1.<strong>常见的java基本类型和它们的存储大小</strong></p>
+<p>   8个的基础类型，</p>
+<p>   从小到大：byte-&gt;char-&gt;short-&gt;int-&gt;float-&gt;long-&gt;double-&gt;boolean</p>
+<p>   对应大小：  8—–&gt; 16—-&gt;16 —-&gt;32—&gt; 32 –&gt; 64–&gt; 64 —-&gt; ~</p>
+<blockquote>
+<p>补充问题：<u>boolean类型占用多少个字节</u></p>
+</blockquote>
+<blockquote>
+<p><em>答：可以使用 1 bit 来存储，但是具体大小没有明确规定，因为对虚拟机来说根本就不存在 boolean 这个类型，boolean类型在编译后会使用其他数据类型（如int，使用 1 来表示 true，0 表示 false）来表示</em></p>
+</blockquote>
+   <a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
+<p>2.<strong>基本类型的包装类型</strong></p>
+<p>   说一下自动装箱与拆箱，常用的装箱类和方法</p>
+<blockquote>
+<p>补充问题：Integer缓存池或着问new Integer(127) 与 Integer.valueOf(127) 的区别<br><em>答：在 Java 8 中，Integer 缓存池的大小默认为 -128~127。Integer.valueOf() 方法的实现比较简单，就是先判断值是否在缓存池中，如果在的话就直接返回缓存池的内容，所以new Integer(127) 每次都会新建一个对象，而Integer.valueOf(123) 会使用缓存池中的对象，多次调用会取得同一个对象的引用</em><br>另外，其它基本类型的包装类也是有缓存池的，只是范围不一样。</p>
+</blockquote>
+<p>3.<strong>String</strong></p>
+<p>   1)<strong>String能不能被继承？</strong>–当然不能，因为它是final的。</p>
+<p>   2)<strong>String为什么是final？（final有哪些好处）</strong>–1. 可以缓存 hash 值，2. String Pool 的需要，3.安全传输，4.线程安全，5.效率</p>
+<p>   3)<strong>String内部是怎么实现的？（通过什么数据结构实现的）</strong>–使用 char 数组存储数据，但在 Java 9 之后，改用 byte 数组来存储字符串了，同时也使用 <code>coder</code> 来标识使用的编码</p>
+<p>4.<strong>String, StringBuffer and StringBuilder</strong></p>
+<p>  只要记住String是不可变的，线程安全，StringBuilder可变，线程不安全，StringBuffer可变，线程安全的就行，多线程并发的时候最好用Buffer</p>
+<p>5.<strong>值传递和引用传递</strong><br>  主要看传递的是对象的value值还是对象的地址引用，值传递不会改变对象本身，引用传递会改成原对象</p>
+<p>6.隐式类型转换（问的少）</p>
+<p>7.<strong>4种访问权限</strong></p>
+<p>8.<strong>抽象类和接口的区别</strong></p>
+<p>   回答关键点：抽象类IS-A关系，接口是LIKE-A 关系。单继承多实现。等</p>
+<p>   这里注意java之后接口也可以拥有默认的方法实现了</p>
+<p>9.<strong>super关键字</strong></p>
+<p>   1）访问父类的构造函数</p>
+<p>   2）访问父类的成员</p>
+<p>10.<strong>重写和重载</strong></p>
+<p>   明白它们的区别</p>
+<p>11.<strong>Object有哪些方法？</strong></p>
+<p>说出常用的hashCode(), equals, toString, clone等即可，多线程相关的notify，notifyAll，wait等。</p>
+<p>这里面每个方法都有要问的点</p>
+<p>例如：</p>
+<blockquote>
+<p>String的hashCode()实现？</p>
+<p>答：hashCode() 返回散列值，而 equals() 是用来判断两个对象是否等价。等价的两个对象散列值一定相同，但是散列值相同的两个对象不一定等价。主要是与奇数31相乘计算得出的。公式为s[0]<em>31^(n-1) + s[1]</em>31^(n-2) + … + s[n-1]，其中s[i]是这个string第i个字符，n是字符串的长度。空字符串的hashcode为0.<br>另外，其他基础包装类都有自己的hashcode实现。</p>
+</blockquote>
+<blockquote>
+<p>Clone相关：深拷贝和浅拷贝</p>
+</blockquote>
+<p>12.<strong>static关键字</strong></p>
+<p>  考察点：静态变量，静态方法，静态语句块，静态内部类，静态导包<br>  初始化顺序：静态变量和静态语句块优先于实例变量和普通语句块，静态变量和静态语句块的初始化顺序取决于它们在代码中的顺序<br>    &gt; 存在继承的情况下，初始化顺序为：<br>    &gt; - 父类（静态变量、静态语句块）<br>    &gt; - 子类（静态变量、静态语句块）<br>    &gt; - 父类（实例变量、普通语句块）<br>    &gt; - 父类（构造函数）<br>    &gt; - 子类（实例变量、普通语句块）<br>    &gt; - 子类（构造函数）</p>
+<p>13.<strong>反射</strong></p>
+<p>反射就是动态加载对象，并对对象进行剖析。在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法，这种动态获取信息以及动态调用对象方法的功能成为Java反射机制。</p>
+<p>优点：可以动态的创建对象和编译，最大限度发挥了java的灵活性。</p>
+<p>缺点：对性能有影响。使用反射基本上一种解释操作，告诉JVM我们要做什么并且满足我们的要求，这类操作总是慢于直接执行java代码。</p>
+<p>常见问题：</p>
+<blockquote>
+<p>java反射的使用中有几种方法获取对象？<br>    1) Class.forName(“全限类名”)<br>    2）类名.class<br>    3）对象.getClass()</p>
+<p>java反射如何获取构造器对象，通过构造器new出一个对象<br>    1） .Clazz.getConstructor([String.class])<br>    2） .Clazz.newInstance([参数])</p>
+<p>Java反射常见的方法去获取对象的方法和属性<br>    1）clz.getFields() ： 获得类的所有的public的字段，也包括父类中的字段<br>    2）clz.getDeclaredFields()：获得某个类的所有声明的字段，即包括public、private和proteced，但是不包括父类的申明字段<br>    3）clz.getMethod(“方法名”,class…..parameaType)：获得类的所有的public的方法<br>    4）clz.getDeclareMethod(“方法名”) ：获取任意方法，但私有方法不能执行<br>    5）M.setAccessible(true)：让私有的方法可以被执行<br>    6） .method.invoke(obj实例对象, obj可变参数): 让方法执行，可以有返回值</p>
+<p>反射的优缺点<br>最大的优点是可扩展性，缺点是性能开销低，不安全，破坏了面向对象的封装性</p>
+</blockquote>
+<p>14.<strong>异常</strong></p>
+<p>​    Java有两种异常，<strong>Error</strong> 和 <strong>Exception</strong>，Error是jvm或者系统无法检测的错误，Exception 又分为两种：受检异常和非受检异常，前者可以被try…catch捕获可被处理可恢复，后者为运行时错误，无法处理和恢复。</p>
+<p>常见异常类类图如下：</p>
+<p><img src="Java_Exceptions.png" alt="Java Exceptions"></p>
+<p>15.<strong>泛型</strong></p>
+<pre><code><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Animal</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> T t;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">set</span><span class="params">(T t)</span> </span>&#123; <span class="keyword">this</span>.t = t; &#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> T <span class="title">get</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> t; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></code></pre><p>16.<strong>泛型</strong></p>
+<p>Java 注解是附加在代码中的一些元信息，用于一些工具在编译、运行时进行解析和使用，起到说明、配置的功能。注解不会也不能影响代码的实际逻辑，仅仅起到辅助性的作用</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>目前不需要赞助，谢谢！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -235,95 +286,115 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.allencao.com/2019/08/06/%E5%B8%B8%E8%A7%81java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/05/java%E9%9D%A2%E8%AF%95%E8%8C%83%E5%9B%B4/" class="archive-article-date">
-  	<time datetime="2019-08-05T03:16:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-05</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/08/07/Java%E5%AE%B9%E5%99%A8%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Java容器相关面试题
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/05/java%E9%9D%A2%E8%AF%95%E8%8C%83%E5%9B%B4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java面试范围</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/05/java%E9%9D%A2%E8%AF%95%E8%8C%83%E5%9B%B4/">java面试范围</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">java interview 面试 java技术栈</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/04/%E9%87%8D%E6%96%B0%E5%BC%80%E5%8D%9A/" class="archive-article-date">
-  	<time datetime="2019-08-04T02:52:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/04/%E9%87%8D%E6%96%B0%E5%BC%80%E5%8D%9A/">重新开博</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -346,8 +417,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

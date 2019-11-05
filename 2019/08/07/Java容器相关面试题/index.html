@@ -6,17 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.allencao.com">
-  <title>Archives | AllenCao&#39;s blog</title>
+  <title>Java容器相关面试题 | AllenCao&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我叫曹宇，是一名java开发者，这是我个人的技术博客">
-<meta name="keywords" content="Java，Java web，Spring，Microservices，Cloud，微服务，Nodejs， 前端开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="AllenCao&#39;s blog">
-<meta property="og:url" content="http:&#x2F;&#x2F;www.allencao.com&#x2F;archives&#x2F;index.html">
+  <meta name="description" content="Java的容器（集合类）主要有2种，Collection和Map，前者是对象的集合，后者是两个对象的映射表 常见问题如下： 1.List 和 Set的区别    前者可重复，后者不能重复 2.List的具体实现有哪些？它们的区别？">
+<meta name="keywords" content="Java Collection Map java集合 java容器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java容器相关面试题">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.allencao.com&#x2F;2019&#x2F;08&#x2F;07&#x2F;Java%E5%AE%B9%E5%99%A8%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98&#x2F;index.html">
 <meta property="og:site_name" content="AllenCao&#39;s blog">
-<meta property="og:description" content="我叫曹宇，是一名java开发者，这是我个人的技术博客">
+<meta property="og:description" content="Java的容器（集合类）主要有2种，Collection和Map，前者是对象的集合，后者是两个对象的映射表 常见问题如下： 1.List 和 Set的区别    前者可重复，后者不能重复 2.List的具体实现有哪些？它们的区别？">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.allencao.com&#x2F;2019&#x2F;08&#x2F;07&#x2F;Java%E5%AE%B9%E5%99%A8%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98&#x2F;CollectionUML.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.allencao.com&#x2F;2019&#x2F;08&#x2F;07&#x2F;Java%E5%AE%B9%E5%99%A8%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98&#x2F;MapUML.png">
+<meta property="og:updated_time" content="2019-11-05T09:04:55.033Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;www.allencao.com&#x2F;2019&#x2F;08&#x2F;07&#x2F;Java%E5%AE%B9%E5%99%A8%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98&#x2F;CollectionUML.png">
   
     <link rel="alternative" href="/atom.xml" title="AllenCao&#39;s blog" type="application/atom+xml">
   
@@ -156,36 +160,101 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Java容器相关面试题" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/07/Java%E5%AE%B9%E5%99%A8%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2019-08-07T02:03:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-07</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/07/Java%E5%AE%B9%E5%99%A8%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/">Java容器相关面试题</a>
+    <h1 class="article-title" itemprop="name">
+      Java容器相关面试题
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/08/07/Java%E5%AE%B9%E5%99%A8%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/" class="archive-article-date">
+  	<time datetime="2019-08-07T02:03:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Java的容器（集合类）主要有2种，Collection和Map，前者是对象的集合，后者是两个对象的映射表</strong></p>
+<p>常见问题如下：</p>
+<p>1.<strong>List 和 Set的区别</strong></p>
+<p>   前者可重复，后者不能重复</p>
+<p>2.<strong>List的具体实现有哪些？它们的区别？</strong></p>
+   <a id="more"></a>
+
+<p>   ArrayList：基于动态数组实现，支持随机访问</p>
+<p>   Vector：和 ArrayList 类似，但它是线程安全的，但性能较差，现在很少用。</p>
+<p>   LinkedList：基于双向链表实现，只能顺序访问，但是可以快速地在链表中间插入和删除元素。不仅如此，LinkedList 还可以用作栈、队列和双向队列。</p>
+<p>3.<strong>ArrayList和LinkedList区别</strong></p>
+<p>   基本同上，记住LinkedList插入删除比较快，查询复杂度为O(n)，更占内存。而ArrayList随机访问快，查询为O(1).</p>
+<p>4.<strong>HashMap的底层实现？如何扩容？</strong></p>
+<p>   基于哈希表实现，底层数据结构是数组，链表和红黑树（1.8，当链表深度达到8，就会将链表转成红黑树，提高查询效率），1.7之前是数组加单链表。</p>
+<p>   默认0.75的扩容因子，数组capacity默认容量是16，扩容要保证是2的n次方，当要存储的键值对的数量超过容量乘以扩容因子时，就必须进行扩容操作。扩容resize操作很费时，因为需要新建数组并将老的数组的数据全部重新插入新表，而且键值对还要重新计算下标。</p>
+<blockquote>
+<p>高(zhuang)级(B)问题：为什么HashMap的构造函数允许用户传入非2的二次方的初始化容量？</p>
+<p>因为HashMap可以根据算法自动的将传入的容量转换成离它最近的2的N次方。</p>
+</blockquote>
+<p>5.<strong>HashMap和HashTable的区别</strong></p>
+<p>   前者可以插入null的键和值，而HashTable不行，HashTable是线程安全的，HashMap的迭代器是快速失败的（fail-fast），HashTable还可以枚举它的键，目前它是遗留类，不推荐使用。现在可以使用 ConcurrentHashMap 来支持线程安全，并且 ConcurrentHashMap 的效率会更高，因为 ConcurrentHashMap 引入了分段锁</p>
+<blockquote>
+<p>高级问题：说说fail-fast和fail-safe的区别</p>
+<p>首先说说什么叫快速失败，例如下面代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">List animals = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">list.add(<span class="string">"dog"</span>);</span><br><span class="line">list.add(<span class="string">"cat"</span>);</span><br><span class="line">list.add(<span class="string">"ship"</span>);</span><br><span class="line">list.add(<span class="string">"cat"</span>);</span><br><span class="line">Iterator&lt;String&gt; iterator = list.iterator();</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="string">"cat"</span>.equals(list.get(i))) &#123;</span><br><span class="line">    list.remove(i);</span><br><span class="line">  &#125;</span><br><span class="line">  i++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>以上list迭代的时候会抛出java.util.ConcurrentModificationException，而安全失败的不会。</p>
+<p>基本上java.util包下面的类都是快速失败的，而java.util.concurrent包下面的类都是安全失败的。</p>
+</blockquote>
+<p>6.<strong>LinkedHashMap</strong></p>
+<p>   继承自 HashMap，因此具有和 HashMap 一样的快速查找特性，内部也是维护了一个双向链表，用来维护插入顺序或者 LRU 顺序，也就是说它可以实现LRU算法的缓存。通过构造函数将 accessOrder 设置为 true，开启 LRU 顺序，然后当插入的键值多于默认缓存空间的时候就将最近最久未使用的数据删除。</p>
+<p>7.<strong>ConcurrentHashMap的原理</strong></p>
+<p>   它和 HashMap 实现上是类似的，最主要的差别是 ConcurrentHashMap 采用了分段锁（Segment），每个分段锁维护着几个桶（HashEntry），多个线程可以同时访问不同分段锁上的桶，从而使其并发度更高（并发度就是 Segment 的个数）。默认的并发级别为 16，也就是说默认创建 16 个 Segment。但1.8之后，取而代之的是Node+CAS+Synchronized来保证并发安全和实现的，锁的粒度从Segment变成了HashEntry（首节点），使得操作也更加清晰流畅，因为已经使用synchronized来进行同步，所以不需要分段锁的概念，也就不需要Segment这种数据结构了，由于粒度的降低，实现的复杂度也增加了。</p>
+<p>8.<strong>TreeSet和HashSet</strong></p>
+<p>   TreeSet：基于红黑树实现，支持有序性操作，例如根据一个范围查找元素的操作。但是查找效率不如 HashSet，HashSet 查找的时间复杂度为 O(1)，TreeSet 则为 O(logN)</p>
+<p>   HashSet：基于哈希表实现，支持快速查找，但不支持有序性操作。并且失去了元素的插入顺序信息，也就是说使用 Iterator 遍历 HashSet 得到的结果是不确定的</p>
+<p>   <em>LinkedHashSet：具有 HashSet 的查找效率，且内部使用双向链表维护元素的插入顺序</em></p>
+<p>9.<strong>PriorityQueue和LinkedList</strong></p>
+<p>   PriorityQueue：基于堆结构实现，可以用它来实现优先队列，而LinkedList可以实现双向队列</p>
+<p>10.<strong>Collection和Collections的区别</strong></p>
+<p>​    前者是集合的底层接口，而后者是对集合类的一个工具/操作类</p>
+<p>11.<strong>为什么集合类没有实现Cloneable和序列化Serializable接口？</strong></p>
+<p>​    根据不同的情况和语义，应该由具体的集合实现类自身去决定如何实现克隆和序列化。例如如果再分布式的应用中，需要网络传输，就需要进行序列化。</p>
+<p><strong>下面是Collection和Map的UML类图：</strong></p>
+<p><img src="CollectionUML.png" alt="CollectionUML"></p>
+<p><img src="MapUML.png" alt="MapUML"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>目前不需要赞助，谢谢！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -197,133 +266,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.allencao.com/2019/08/07/Java%E5%AE%B9%E5%99%A8%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/06/%E5%B8%B8%E8%A7%81java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2019-08-06T04:04:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-06</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/06/%E5%B8%B8%E8%A7%81java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">常见java基础面试题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/06/%E5%B8%B8%E8%A7%81java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/">常见java基础面试题</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Java Java面试基础 Java反射 Java异常</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/05/java%E9%9D%A2%E8%AF%95%E8%8C%83%E5%9B%B4/" class="archive-article-date">
-  	<time datetime="2019-08-05T03:16:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/05/java%E9%9D%A2%E8%AF%95%E8%8C%83%E5%9B%B4/">java面试范围</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">java interview 面试 java技术栈</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/04/%E9%87%8D%E6%96%B0%E5%BC%80%E5%8D%9A/" class="archive-article-date">
-  	<time datetime="2019-08-04T02:52:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/04/%E9%87%8D%E6%96%B0%E5%BC%80%E5%8D%9A/">重新开博</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -346,8 +388,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
